@@ -11,6 +11,7 @@ import {AppState} from '../../app.reducers';
 export class TodosListComponent implements OnInit {
 
   todos: TODO[];
+  filtro: string;
 
   constructor(private store: Store<AppState>) {
   }
@@ -19,6 +20,7 @@ export class TodosListComponent implements OnInit {
     this.todos = [];
     this.store.subscribe(state => {
       this.todos = state.todos;
+      this.filtro = state.filter;
     });
 
   }
