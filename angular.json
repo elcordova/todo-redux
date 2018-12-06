@@ -24,8 +24,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/todomvc-common/base.css",
-              "node_modules/todomvc-app-css/index.css"
+              "external_styles/todomvc-common/base.css",
+              "external_styles/todomvc-app-css/index.css"
             ],
             "scripts": []
           },

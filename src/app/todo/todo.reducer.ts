@@ -18,6 +18,19 @@ export function todoReducer(state = estadoInicial, action: fromTodo.Acciones): T
         return todoEdit;
       });
 
+      case fromTodo.EDIT_TODO:
+        return state.map(todoEdit => {
+          if (todoEdit.id === action.id) {
+            return {...todoEdit, texto: action.texto};
+          }
+          return todoEdit;
+        });
+
+        case fromTodo.DELETE_TODO:
+          return state.filter(todoDelete =>
+            todoDelete.id !== action.id
+          );
+
     default:
       return state;
   }
